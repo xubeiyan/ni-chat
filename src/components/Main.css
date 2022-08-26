@@ -1,5 +1,5 @@
 .main-container {
-    width: 360px;
-    margin: 0 auto;
-    background-color: #F1F1F1;
+  margin: 0 auto;
+  background-color: #f1f1f1;
+  position: relative;
 }

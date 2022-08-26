@@ -1,0 +1,10 @@
+.navigation-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5em;
+  /* background-color: gray; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

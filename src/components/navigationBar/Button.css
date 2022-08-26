@@ -1,0 +1,9 @@
+.button {
+  border-radius: 1em;
+  height: 2.5em;
+  width: 5em;
+}
+
+.button:active {
+  background-color: #DDD;
+}

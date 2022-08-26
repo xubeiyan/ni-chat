@@ -1,4 +1,35 @@
 .chat-title {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    padding: .5em 0;
+    position: relative;
+}
+
+.button-container {
+    padding: 0 1em;
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+
+.button-container.left {
+    left: 0;
+}
+
+.button-container.right {
+    right: 0;
+}
+
+.button-left {
+    width: 1.2em;
+}
+
+.button-right {
+    width: 1.7em;
+}
+
+.chat-name {
+    font-size: medium;
+    font-weight: 600;
 }

@@ -1,15 +1,30 @@
 import PhoneStatusBar from "./PhoneStatusBar";
 import ChatTitle from "./ChatTitle";
+import ChatBody from "./ChatBody";
+import MessageBar from "./MessageBar";
+import NavigationBar from "./NavigationBar";
 
-import './Main.css';
+import "./Main.css";
+import { useState } from "react";
 
 const Main = () => {
-    return (
-        <div className="main-container">
-            <PhoneStatusBar />
-            <ChatTitle name="随便写点"/>
-        </div>
-    )
-}
+  // 手机型号，决定status bar的样式
+  const [phoneType, setPhoneType] = useState("default");
+
+  const roundRadiusStyle = {
+    borderRadius: "2em",
+    minHeight: "700px",
+    width: `${(700 * 9) / 16}px`,
+  };
+  return (
+    <div className="main-container" style={roundRadiusStyle}>
+      <PhoneStatusBar type={phoneType} battery={60} cellular={30} wifi={80}/>
+      <ChatTitle name="雪雪" />
+      <ChatBody />
+      <MessageBar />
+      <NavigationBar />
+    </div>
+  );
+};
 
 export default Main;
