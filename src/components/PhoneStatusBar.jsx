@@ -1,7 +1,7 @@
 import Time from "./statusBar/Time";
 import RightPart from './statusBar/RightPart';
 
-function PhoneStatusBar({ type }) {
+function PhoneStatusBar({wifi, battery, cellular}) {
   const style = {
     padding: '.5em 1em',
     display: 'flex',
@@ -11,7 +11,7 @@ function PhoneStatusBar({ type }) {
   return (
     <div style={style}>
       <Time />
-      <RightPart />
+      <RightPart wifi={wifi} battery={battery} cellular={cellular}/>
     </div>
   );
 }

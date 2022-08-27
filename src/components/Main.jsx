@@ -18,7 +18,7 @@ const Main = () => {
   };
   return (
     <div className="main-container" style={roundRadiusStyle}>
-      <PhoneStatusBar type={phoneType} battery={60} cellular={30} wifi={80}/>
+      <PhoneStatusBar type={phoneType} wifi={60} cellular={40} battery={78}/>
       <ChatTitle name="雪雪" />
       <ChatBody />
       <MessageBar />

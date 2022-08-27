@@ -7,7 +7,6 @@ const Time = ({hours, minutes}) => {
     let minutesText = minutes < 10 ? `0${minutes}` : `${minutes}`;
 
     const style = {
-        fontFamily: 'Roboto',
         fontSize: 'small',
         fontWeight: '600',
     }
