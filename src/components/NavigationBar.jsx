@@ -1,14 +1,19 @@
-import HomeButton from './navigationBar/HomeButton';
+import Button from './navigationBar/Button';
+
 import './NavigationBar.css';
 
 const NavigationBar = () => {
   return (
     <div className="navigation-bar">
-      <span>Back</span>
-      <span>
-        <HomeButton />
-      </span>
-      <span>Recent</span>
+      <div className='button-area'>
+        <Button buttonType="back"/>
+      </div>
+      <div className='button-area'>
+        <Button buttonType="home"/>
+      </div>
+      <div className='button-area'>
+        <Button buttonType="overview"/>
+      </div>
     </div>
   )
 }

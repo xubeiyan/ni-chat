@@ -1,9 +1,20 @@
 .button {
-  border-radius: 1em;
-  height: 2.5em;
-  width: 5em;
+  height: 1em;
+  width: 1em;
+  border-radius: 3px;
+  background-color: black;
 }
 
-.button:active {
-  background-color: #DDD;
+.button-home {
+  clip-path: circle();
+  /* border: .1em solid #f1f1f1; */
+}
+
+.button-back {
+  clip-path: polygon(15% 45%, 15% 55%, 100% 100%, 100% 0);
+}
+
+
+.button-overview {
+  border: .05em solid #f1f1f1;
 }

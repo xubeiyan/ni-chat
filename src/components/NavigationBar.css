@@ -8,3 +8,16 @@
   justify-content: center;
   align-items: center;
 }
+
+.navigation-bar > .button-area {
+  margin: 0 2.5em;
+  padding: .5em .5em;
+  border-radius: 1em;
+  transition: all 200ms linear;
+}
+
+.navigation-bar > .button-area:active {
+  margin: 0;
+  padding: .5em 3em;
+  background-color: gainsboro;
+}
