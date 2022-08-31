@@ -24,7 +24,7 @@ const CellularIcon = ({ celluar, wirelessGeneration }) => {
     else if (celluar > 0) cellularIconEnum = cellularIcon0;
     else if (celluar == 'noInternet') cellularIconEnum = cellularIconNoInternet;
 
-    console.log(wirelessGeneration)
+    // console.log(wirelessGeneration)
     return (
         <>
             {wirelessGeneration !== undefined && <span style={wirelessStyle}>{ wirelessGeneration }</span>}

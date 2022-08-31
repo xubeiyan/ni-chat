@@ -1,7 +1,13 @@
 import Time from "./statusBar/Time";
 import RightPart from './statusBar/RightPart';
 
-function PhoneStatusBar({ wifi, battery, cellular, wirelessGeneration }) {
+const PhoneStatusBar = ({ 
+  wifi, 
+  battery, 
+  cellular, 
+  wirelessGeneration,
+  wifiConnected
+}) => {
   const style = {
     padding: '.5em 1em',
     display: 'flex',
@@ -11,11 +17,12 @@ function PhoneStatusBar({ wifi, battery, cellular, wirelessGeneration }) {
   return (
     <div style={style}>
       <Time />
-      <RightPart wifi={wifi}
+      <RightPart
         battery={battery} cellular={cellular}
-        wirelessGeneration={wirelessGeneration} />
+        wirelessGeneration={wirelessGeneration} 
+        wifi={wifi} wifiConnected={wifiConnected}/>
     </div>
-  );
+  )
 }
 
-export default PhoneStatusBar;
+export default PhoneStatusBar
