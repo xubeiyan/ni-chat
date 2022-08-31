@@ -27,7 +27,7 @@ const BatteryIcon = ({ battery, showNumber }) => {
       <img style={{ height: "1em" }} src={batteryIconEnum} />
       {showNumber ? (
         <span
-          style={{ fontSize: "small", fontWeight: "500" }}
+          style={{ fontSize: "small", fontWeight: "600" }}
         >
           {battery}%
         </span>

@@ -7,10 +7,15 @@ const style = {
   height: '1em',
 }
 
+const rightPartStyle = {
+  display: 'flex',
+  alignItems: 'center'
+}
+
 const RightPart = ({battery}) => {
 
   return (
-    <span style={{display: 'flex'}}>
+    <span style={rightPartStyle}>
       <img style={{...style, paddingRight: '.2em'}} src={vpn} />
       <img style={style} src={wifiIcon} />
       <img style={style} src={cellularIcon} />
