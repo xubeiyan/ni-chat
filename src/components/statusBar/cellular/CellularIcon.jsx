@@ -12,7 +12,7 @@ const style = {
 const wirelessStyle = {
     fontSize: 'small',
     fontWeight: 500,
-    padding: '0 .2em'
+    padding: '0 .1em'
 }
 
 const CellularIcon = ({ celluar, wirelessGeneration }) => {
@@ -24,10 +24,11 @@ const CellularIcon = ({ celluar, wirelessGeneration }) => {
     else if (celluar > 0) cellularIconEnum = cellularIcon0;
     else if (celluar == 'noInternet') cellularIconEnum = cellularIconNoInternet;
 
-    // console.log(wirelessGeneration)
+    let isRenderGenerationIcon = wirelessGeneration !== undefined && wirelessGeneration !== '';
+    // console.log(isRenderGenerationIcon)
     return (
         <>
-            {wirelessGeneration !== undefined && <span style={wirelessStyle}>{ wirelessGeneration }</span>}
+            {isRenderGenerationIcon && <span style={wirelessStyle}>{ wirelessGeneration }</span>}
             <img style={style} src={cellularIconEnum} />
         </>
     )

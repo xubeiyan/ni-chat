@@ -21,7 +21,7 @@ const Main = () => {
       <PhoneStatusBar
         type={phoneType}
         wifi={60} wifiConnected={true} cellular={'noInternet'}
-        battery={78} wirelessGeneration="EDGE" />
+        battery={78} wirelessGeneration="GPRS" />
       <ChatTitle name="雪雪" />
       <ChatBody />
       <MessageBar />
