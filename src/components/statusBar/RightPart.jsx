@@ -1,6 +1,7 @@
 import BatteryIcon from './battery/BatteryIcon.jsx';
+import CellularIcon from './cellular/CellularIcon.jsx';
+
 import wifiIcon from "../../assets/statusBar/signal_wifi.svg";
-import cellularIcon from "../../assets/statusBar/signal_cellular.svg";
 import vpn from "../../assets/statusBar/vpn_key.svg";
 
 const style = {
@@ -12,13 +13,13 @@ const rightPartStyle = {
   alignItems: 'center'
 }
 
-const RightPart = ({battery}) => {
+const RightPart = ({battery, cellular}) => {
 
   return (
     <span style={rightPartStyle}>
       <img style={{...style, paddingRight: '.2em'}} src={vpn} />
       <img style={style} src={wifiIcon} />
-      <img style={style} src={cellularIcon} />
+      <CellularIcon celluar={cellular}/>
       <BatteryIcon battery={battery}/>
     </span>
   );
