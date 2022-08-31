@@ -9,7 +9,13 @@ const style = {
     height: '1em',
 }
 
-const CellularIcon = ({ celluar }) => {
+const wirelessStyle = {
+    fontSize: 'small',
+    fontWeight: 500,
+    padding: '0 .2em'
+}
+
+const CellularIcon = ({ celluar, wirelessGeneration }) => {
     let cellularIconEnum = cellularIconNoInternet;
     if (celluar > 80) cellularIconEnum = cellularIcon4;
     else if (celluar > 60) cellularIconEnum = cellularIcon3;
@@ -17,8 +23,13 @@ const CellularIcon = ({ celluar }) => {
     else if (celluar > 20) cellularIconEnum = cellularIcon1;
     else if (celluar > 0) cellularIconEnum = cellularIcon0;
     else if (celluar == 'noInternet') cellularIconEnum = cellularIconNoInternet;
+
+    console.log(wirelessGeneration)
     return (
-        <img style={style} src={cellularIconEnum} />
+        <>
+            {wirelessGeneration !== undefined && <span style={wirelessStyle}>{ wirelessGeneration }</span>}
+            <img style={style} src={cellularIconEnum} />
+        </>
     )
 }
 

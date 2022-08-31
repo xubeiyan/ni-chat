@@ -13,13 +13,13 @@ const rightPartStyle = {
   alignItems: 'center'
 }
 
-const RightPart = ({battery, cellular}) => {
+const RightPart = ({battery, cellular, wirelessGeneration}) => {
 
   return (
     <span style={rightPartStyle}>
       <img style={{...style, paddingRight: '.2em'}} src={vpn} />
       <img style={style} src={wifiIcon} />
-      <CellularIcon celluar={cellular}/>
+      <CellularIcon celluar={cellular} wirelessGeneration={wirelessGeneration}/>
       <BatteryIcon battery={battery}/>
     </span>
   );
