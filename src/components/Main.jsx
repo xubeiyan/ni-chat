@@ -20,8 +20,8 @@ const Main = () => {
     <div className="main-container" style={roundRadiusStyle}>
       <PhoneStatusBar
         type={phoneType}
-        wifi={60} wifiConnected={true} cellular={'noInternet'}
-        battery={78} wirelessGeneration="GPRS" />
+        wifi={60} wifiConnected={false} cellular={'noInternet'}
+        battery={78} wirelessGeneration="LTE" />
       <ChatTitle name="雪雪" />
       <ChatBody />
       <MessageBar />

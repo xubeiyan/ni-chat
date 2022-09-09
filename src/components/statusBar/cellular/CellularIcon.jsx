@@ -5,14 +5,10 @@ import cellularIcon3 from "../../../assets/statusBar/signal_cellular3.svg";
 import cellularIcon4 from "../../../assets/statusBar/signal_cellular4.svg";
 import cellularIconNoInternet from "../../../assets/statusBar/signal_cellular_no_internet.svg";
 
+import '../StatusBarStyle.css';
+
 const style = {
     height: '1em',
-}
-
-const wirelessStyle = {
-    fontSize: 'small',
-    fontWeight: 500,
-    padding: '0 .1em'
 }
 
 const CellularIcon = ({ celluar, wirelessGeneration }) => {
@@ -28,7 +24,7 @@ const CellularIcon = ({ celluar, wirelessGeneration }) => {
     // console.log(isRenderGenerationIcon)
     return (
         <>
-            {isRenderGenerationIcon && <span style={wirelessStyle}>{ wirelessGeneration }</span>}
+            {isRenderGenerationIcon && <span className="status-bar-text">{ wirelessGeneration }</span>}
             <img style={style} src={cellularIconEnum} />
         </>
     )
